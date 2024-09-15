@@ -1,25 +1,18 @@
+import Hero from "./components/Hero"
 
 function App() {
-    const user_status = false;
+    const personObject = {
+        name: "John",
+        age: 25,
+        address: {
+            city: "New York",
+            country: "USA",
+        },
+    }
+
     return (
         <div>
-            {(()=>{
-                if(user_status){
-                    return (
-                        <div>
-                            <h1>Welcome User</h1>
-                            <button>Logout</button>
-                        </div>
-                    )
-                }else{
-                    return (
-                        <div>
-                            <h1>Welcome Guest</h1>
-                            <button>Login</button>
-                        </div>
-                    )
-                }
-            })()}
+            <Hero personInfo={personObject}/>
         </div>
     )
 }
