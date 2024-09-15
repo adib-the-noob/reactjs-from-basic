@@ -1,19 +1,17 @@
-import Hero from "./components/Hero"
-
 const App = () => {
-    
-const BtnClick = () => {
-    // give alert when button is clicked
-    alert("Button Clicked");
-    
-}
 
+const PostFormSubmit = (event) => {
+    event.preventDefault();
+    console.log('Form Submitted');
+}
     return (
         <div>
-            <Hero ButtonClick={BtnClick}/>
+            <form onSubmit={PostFormSubmit}>
+                <input placeholder="name" />
+                <button type="submit">Submit</button>
+            </form>
         </div>
     )
 }
 
 export default App;
-1
