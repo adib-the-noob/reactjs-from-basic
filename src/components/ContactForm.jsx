@@ -2,7 +2,7 @@ const ContactForm = () => {
     return (
         <div>
             <input placeholder="Email Address" />
-            <button>Submit</button>
+            <button onClick={() =>alert("Kire mama!")}>Submit</button>
         </div>
     );
 };

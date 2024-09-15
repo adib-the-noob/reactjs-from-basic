@@ -2,7 +2,10 @@
 const Footer = () => {
     return (
         <div>
-            <p>
+            <p style={{
+                textAlign: "center",
+                color: "red",
+            }}>
                 All rights reserved
             </p>
         </div>
