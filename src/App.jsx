@@ -1,9 +1,15 @@
+import ContactForm from "./components/ContactForm.jsx";
+import Hero from "./components/Hero.jsx";
+import Footer from "./components/Footer.jsx";
+import Header from "./components/Header.jsx";
+
 function App() {
   return (
     <>
-    <h1>
-        Hello React!
-    </h1>
+      <Header/>
+      <Hero/>
+      <ContactForm/>
+      <Footer/>
     </>
   )
 }
