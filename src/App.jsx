@@ -1,15 +1,23 @@
-const App = () => {
+import { useState } from "react";
 
-const PostFormSubmit = (event) => {
-    event.preventDefault();
-    console.log('Form Submitted');
-}
+const App = () => {
+    const [ myObj, setMyObj] = useState({
+        "userName" : "ADIB",
+        "passWord" : "hacker"
+    });
+
+    const changeValueObj = () => {
+        setMyObj(
+            prebObj => ({
+                ...prebObj,
+                "userName" : "Abdul Adib"
+            })
+        )
+    }
     return (
         <div>
-            <form onSubmit={PostFormSubmit}>
-                <input placeholder="name" />
-                <button type="submit">Submit</button>
-            </form>
+            <p>This users name is {myObj.userName}</p>
+        <button onClick={changeValueObj}>ChangeName</button>
         </div>
     )
 }
